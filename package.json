@@ -1,0 +1,33 @@
+{
+  "name": "mihlfeld_js_build",
+  "version": "1.0.0",
+  "description": "npm build that translates es6 javascript into es5 and minifies code for production",
+  "main": "main.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.3.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "start": "node lib/main.js",
+    "minify": "minify lib -d lib",
+    "build": "babel src --out-dir lib",
+    "watch": "babel src --watch --out-dir lib",
+    "babel-version": "babel --version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffbeagley/babel_es6_es5_minify.git"
+  },
+  "author": "jeff beagley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffbeagley/babel_es6_es5_minify/issues"
+  },
+  "homepage": "https://github.com/jeffbeagley/babel_es6_es5_minify#readme"
+}
